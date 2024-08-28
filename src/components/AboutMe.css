@@ -1,0 +1,88 @@
+.about-me {
+  display: flex;
+  align-items: center;
+  padding: 5rem 1rem;
+  position: relative;
+}
+
+.about-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.about-me-container:hover {
+  box-shadow: 0px 10px 20px rgba(31, 79, 38, 0.2);
+}
+
+.about-me-img {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-me-img img {
+  max-width: 100%;
+  border-radius: 16px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.about-me-img img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.about-me-text {
+  flex: 2;
+  padding: 20px;
+}
+
+.about-me-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-me-text {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(1);
+  opacity: 0.8;
+}
+
+.about-me-text:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.paralax {
+  background: url("/public/parallax-bg.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-me-img,
+  .about-me-text {
+    flex: unset;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .paralax {
+    background-attachment: scroll;
+  }
+}
