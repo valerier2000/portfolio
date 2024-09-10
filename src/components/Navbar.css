@@ -6,13 +6,17 @@
   background-color: #180f29;
   color: #e9f1f7;
   padding: 1rem;
-  border-bottom: 2px solid #eb5160;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* border-bottom: 1px solid #d972ff; */
+  box-shadow: 0 1px 10px #d972ff;
 }
 
 .navbar-left .logo {
   font-size: 1.6rem;
   font-weight: bold;
-  color: #5efc8d;
+  color: #d972ff;
   text-decoration: none;
   padding: 10px 30px;
 }
