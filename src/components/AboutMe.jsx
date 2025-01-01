@@ -12,18 +12,13 @@ function AboutMe() {
           <div className="about-me-text">
             <h2>About me</h2>
             <p>
-              Hi, I am Aayush. Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Quod, dolor. Iusto ut vitae exercitationem
-              reprehenderit ea nesciunt aliquid corrupti libero ratione,
-              repudiandae, ipsa, dolorum architecto natus eius? Exercitationem,
-              molestias aperiam! Fugit nisi eos nemo dolor architecto ab
-              incidunt labore quo nostrum vero, possimus a distinctio maxime
-              quos similique, tenetur id, fuga illum veritatis enim adipisci!
-              Odio quis harum voluptatum molestias? Voluptatibus esse fugiat
-              reprehenderit odit, earum ipsa harum incidunt debitis natus.
-              Possimus labore, quo expedita sunt repellendus, delectus nisi quam
-              eligendi quibusdam nemo mollitia culpa architecto nobis debitis?
-              Architecto, consequatur!
+              Hi, I am Valeriia. I am a passionate frontend developer with a
+              focus on React.js and building responsive, user-friendly web
+              applications. I have a background in computer science and
+              experience as a Junior React Developer, where I worked on projects
+              such as a university analytics system and a CRM system for sports
+              teams. I also bring strong skills in JavaScript, CSS, HTML, and
+              state management libraries like Zustand
             </p>
           </div>
         </div>
