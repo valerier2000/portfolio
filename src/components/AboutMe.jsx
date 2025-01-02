@@ -1,13 +1,13 @@
 import "./AboutMe.css";
-import profilePic from "../assets/Aayush.png";
+import profilePic from "../assets/Valeriia.jpg";
 
 function AboutMe() {
   return (
-    <section className="paralax">
+    <section className="paralax" id="about-me">
       <div className="about-me">
         <div className="about-me-container">
           <div className="about-me-img">
-            <img src={profilePic} alt="Aayush" />
+            <img src={profilePic} alt="Valeriia" />
           </div>
           <div className="about-me-text">
             <h2>About me</h2>
