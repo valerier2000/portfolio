@@ -11,12 +11,11 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #d972ff;
+  border-radius: 8px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
@@ -32,7 +31,7 @@
 
 .about-me-img img {
   max-width: 100%;
-  border-radius: 16px;
+  border-radius: 8px;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -43,16 +42,14 @@
 .about-me-text {
   flex: 2;
   padding: 20px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(1);
+  opacity: 0.8;
 }
 
 .about-me-text h2 {
   margin-bottom: 20px;
-}
-
-.about-me-text {
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  transform: scale(1);
-  opacity: 0.8;
+  color: #5efc8d;
 }
 
 .about-me-text:hover {
@@ -61,28 +58,67 @@
 }
 
 .paralax {
-  background: url("/public/parallax-bg.jpg");
-
+  background: url("/parallax-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
-
 @media (max-width: 768px) {
+  .about-me {
+    padding: 3rem 1rem; /* Reduce padding for smaller screens */
+  }
+
   .about-me-container {
-    flex-direction: column;
+    flex-direction: column; /* Stack the image and text vertically */
     text-align: center;
+    max-width: 100%; /* Ensure it takes the full width of the screen */
+    padding: 1rem; /* Reduce padding inside the container */
   }
 
   .about-me-img,
   .about-me-text {
-    flex: unset;
-    width: 100%;
-    padding: 10px;
+    flex: unset; /* Remove flex behavior */
+    width: 100%; /* Ensure the content spans the full width */
+    padding: 10px; /* Adjust padding for better fit on small screens */
+  }
+
+  .about-me-img img {
+    max-width: 80%; /* Scale the image down on smaller screens */
+    margin: 0 auto; /* Center the image */
+  }
+
+  .about-me-text h2 {
+    font-size: 1.8rem; /* Adjust heading size for smaller screens */
+  }
+
+  .about-me-text p {
+    font-size: 1rem; /* Adjust paragraph font size */
   }
 
   .paralax {
-    background-attachment: scroll;
+    background-attachment: scroll; /* Disable parallax effect on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me {
+    padding: 2rem 1rem; /* Further reduce padding for very small screens */
+  }
+
+  .about-me-container {
+    padding: 0.5rem; /* Make the container more compact */
+  }
+
+  .about-me-img img {
+    max-width: 70%; /* Reduce image size further on very small screens */
+  }
+
+  .about-me-text h2 {
+    font-size: 1.6rem; /* Reduce heading size further */
+  }
+
+  .about-me-text p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
   }
 }
