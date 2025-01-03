@@ -8,22 +8,22 @@ function Contact() {
     {
       name: "Email",
       icon: <EmailIcon className="contact-icon" />,
-      url: "mailto:rautela4488@gmail.com",
+      url: "mailto:valeriiarohatynska@gmail.com",
     },
     {
       name: "Phone",
       icon: <LocalPhoneIcon className="contact-icon" />,
-      url: "tel:+48577855970",
+      url: "tel:+48575246082",
     },
     {
       name: "GitHub",
       icon: <GitHubIcon className="contact-icon" />,
-      url: "https://github.com/aayushrautela",
+      url: "https://github.com/valerier2000",
     },
     {
       name: "LinkedIn",
       icon: <LinkedInIcon className="contact-icon" />,
-      url: "https://www.linkedin.com/in/aayush-rautela-50471a240/",
+      url: "https://www.linkedin.com/in/valerier2000/",
     },
   ];
 
