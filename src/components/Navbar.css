@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 80px;
   background-color: #180f29;
   color: #e9f1f7;
   padding: 1rem;
@@ -19,6 +19,12 @@
   color: #d972ff;
   text-decoration: none;
   padding: 10px 30px;
+  transition: color 0.3s ease;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.navbar-left .logo:hover {
+  color: #5efc8d;
 }
 
 .navbar-right .nav-links {
