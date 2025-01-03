@@ -10,7 +10,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-left">
         <a href="/" className="logo" onClick={handleLogoClick}>
-          Aayush Rautela
+          Valeriia Rohatynska
         </a>
       </div>
       <div className="navbar-right">
