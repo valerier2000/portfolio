@@ -1,0 +1,191 @@
+.carousel {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  min-width: 100vw;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-title {
+  position: absolute;
+  top: 10px; /* Distance from the top */
+  left: 50%;
+  transform: translateX(-50%); /* Center the element horizontally */
+  font-size: 2.5rem;
+  color: #d972ff;
+  z-index: 3; /* Ensure it stays above the image */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: Add a transparent background */
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.carousel-content {
+  position: absolute;
+  top: 50%; /* Center the content vertically */
+  left: 50px; /* Distance from the left side */
+  transform: translateY(-50%); /* Adjust for perfect vertical centering */
+  background-color: rgba(0, 0, 0, 0.7); /* Dark box background for contrast */
+  color: #fff;
+  text-align: left; /* Align text to the left */
+  padding: 20px;
+  border: 2px solid #5efc8d; /* Add border */
+  border-radius: 8px; /* Slightly round the corners */
+  max-width: 300px; /* Limit the width of the content box */
+  z-index: 2; /* Place it above the overlay */
+}
+
+.carousel-content h3 {
+  font-size: 1.8rem; /* Adjust the font size to fit the box */
+  margin-bottom: 10px;
+}
+
+.carousel-content p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.carousel-content a {
+  color: #5efc8d;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3; /* Place it above everything */
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Darken on hover */
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #5efc8d; /* Active dot color */
+}
+
+.dot:hover {
+  background-color: #5efc8d;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media query for screens smaller than 768px (e.g., tablets and phones) */
+@media (max-width: 768px) {
+  .carousel-content {
+    max-width: 200px; /* Further reduce box size for small screens */
+    padding: 10px; /* Reduce padding */
+    left: 10px; /* Move content closer to the edge */
+  }
+
+  .carousel-content h3 {
+    font-size: 1.2rem; /* Smaller font size */
+  }
+
+  .carousel-content p {
+    font-size: 0.8rem; /* Smaller font size */
+  }
+
+  .carousel-content a {
+    font-size: 1rem; /* Reduce font size for link */
+  }
+
+  .carousel-button {
+    padding: 8px; /* Smaller buttons */
+  }
+
+  .dot {
+    width: 6px; /* Smaller dots for mobile */
+    height: 6px;
+  }
+
+  .carousel-dots {
+    bottom: 5px; /* Bring dots closer to the bottom */
+  }
+}
