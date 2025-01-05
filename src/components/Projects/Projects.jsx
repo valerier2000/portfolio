@@ -33,11 +33,11 @@ function Projects() {
       <div className="projects-grid">
         {projects.map((project) => (
           <div className="project" key={project.name}>
-            <img src={project.img} alt={`Project ${project.name}`} />
-            <h3>
-              <a href={project.url}>{project.name}</a>
-            </h3>
-            <p>{project.description}</p>
+            <a href={project.url} target="_blank" rel="noopener noreferrer">
+              <img src={project.img} alt={`Project ${project.name}`} />
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </a>
           </div>
         ))}
       </div>
