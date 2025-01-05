@@ -9,7 +9,6 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* border-bottom: 1px solid #d972ff; */
   box-shadow: 0 1px 10px #d972ff;
 }
 
@@ -35,16 +34,34 @@
   padding: 0;
 }
 
-.navbar-right .nav-links a {
+.nav-link {
   text-decoration: none;
   color: inherit;
   font-size: 18px;
-  padding: 10px;
+  margin: 10px;
+  padding: 5px 0;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.navbar-right .nav-links a:hover {
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #5efc8d;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
   color: #5efc8d;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
