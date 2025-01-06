@@ -1,0 +1,45 @@
+/* Section Styling */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.skills h2 {
+  margin-bottom: 0;
+  background: linear-gradient(90deg, #d972ff, #5efc8d);
+  background-clip: text;
+  color: transparent;
+  height: auto;
+  padding: 30px 0;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Skill Icon Styling */
+.skill img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
