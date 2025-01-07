@@ -1,20 +1,32 @@
 import "./Skills.css";
-import project3 from "../assets/Valeriia.jpg";
+import html from "../assets/html.svg";
+import css from "../assets/css.svg";
+import js from "../assets/js.svg";
+import react from "../assets/reactjs.svg";
+import ts from "../assets/ts.svg";
+import sass from "../assets/sass.svg";
+import materialui from "../assets/material-ui.svg";
+import devextreme from "../assets/devextreme.png";
+import tailwind from "../assets/tailwind-css.svg";
+import zustand from "../assets/zustand.svg";
+import postgresql from "../assets/postgresql.svg";
+import mongodb from "../assets/mongodb.svg";
+import git from "../assets/git.svg";
 
 const skills = [
-  { name: "HTML5", src: project3 },
-  { name: "CSS3", src: project3 },
-  { name: "JavaScript", src: project3 },
-  { name: "React", src: project3 },
-  { name: "TypeScript", src: project3 },
-  { name: "SASS", src: project3 },
-  { name: "Material-UI", src: project3 },
-  { name: "DevExtreme", src: project3 },
-  { name: "Tailwind CSS", src: project3 },
-  { name: "Zustand", src: project3 },
-  { name: "PostgreSQL", src: project3 },
-  { name: "MongoDB", src: project3 },
-  { name: "Git", src: project3 },
+  { name: "HTML5", src: html },
+  { name: "CSS3", src: css },
+  { name: "JavaScript", src: js },
+  { name: "React", src: react },
+  { name: "TypeScript", src: ts },
+  { name: "SASS", src: sass },
+  { name: "Material-UI", src: materialui },
+  { name: "DevExtreme", src: devextreme },
+  { name: "Tailwind CSS", src: tailwind },
+  { name: "Zustand", src: zustand },
+  { name: "PostgreSQL", src: postgresql },
+  { name: "MongoDB", src: mongodb },
+  { name: "Git", src: git },
 ];
 
 function Skills() {
