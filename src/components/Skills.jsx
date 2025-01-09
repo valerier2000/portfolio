@@ -14,19 +14,35 @@ import mongodb from "../assets/mongodb.svg";
 import git from "../assets/git.svg";
 
 const skills = [
-  { name: "HTML5", src: html },
-  { name: "CSS3", src: css },
-  { name: "JavaScript", src: js },
-  { name: "React", src: react },
-  { name: "TypeScript", src: ts },
-  { name: "SASS", src: sass },
-  { name: "Material-UI", src: materialui },
-  { name: "DevExtreme", src: devextreme },
-  { name: "Tailwind CSS", src: tailwind },
-  { name: "Zustand", src: zustand },
-  { name: "PostgreSQL", src: postgresql },
-  { name: "MongoDB", src: mongodb },
-  { name: "Git", src: git },
+  {
+    name: "HTML5",
+    src: html,
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    name: "CSS3",
+    src: css,
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    name: "JavaScript",
+    src: js,
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  { name: "React", src: react, link: "https://reactjs.org/" },
+  { name: "TypeScript", src: ts, link: "https://www.typescriptlang.org/" },
+  { name: "SASS", src: sass, link: "https://sass-lang.com/" },
+  { name: "Material-UI", src: materialui, link: "https://mui.com/" },
+  { name: "DevExtreme", src: devextreme, link: "https://js.devexpress.com/" },
+  { name: "Tailwind CSS", src: tailwind, link: "https://tailwindcss.com/" },
+  {
+    name: "Zustand",
+    src: zustand,
+    link: "https://docs.pmnd.rs/zustand/getting-started/introduction",
+  },
+  { name: "PostgreSQL", src: postgresql, link: "https://www.postgresql.org/" },
+  { name: "MongoDB", src: mongodb, link: "https://www.mongodb.com/" },
+  { name: "Git", src: git, link: "https://git-scm.com/" },
 ];
 
 function Skills() {
@@ -37,7 +53,9 @@ function Skills() {
       <div className="skills-container">
         {skills.map((skill) => (
           <div className="skill" key={skill.name}>
-            <img src={skill.src} alt={skill.name} />
+            <a href={skill.link} target="_blank" rel="noopener noreferrer">
+              <img src={skill.src} alt={skill.name} />
+            </a>
           </div>
         ))}
       </div>
