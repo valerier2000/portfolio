@@ -1,17 +1,17 @@
 import "./Skills.css";
-import html from "../assets/html.svg";
-import css from "../assets/css.svg";
-import js from "../assets/js.svg";
-import react from "../assets/reactjs.svg";
-import ts from "../assets/ts.svg";
-import sass from "../assets/sass.svg";
-import materialui from "../assets/material-ui.svg";
-import devextreme from "../assets/devextreme.png";
-import tailwind from "../assets/tailwind-css.svg";
-import zustand from "../assets/zustand.svg";
-import postgresql from "../assets/postgresql.svg";
-import mongodb from "../assets/mongodb.svg";
-import git from "../assets/git.svg";
+import html from "../assets/skills/html.svg";
+import css from "../assets/skills/css.svg";
+import js from "../assets/skills/js.svg";
+import react from "../assets/skills/reactjs.svg";
+import ts from "../assets/skills/ts.svg";
+import sass from "../assets/skills/sass.svg";
+import materialui from "../assets/skills/material-ui.svg";
+import devextreme from "../assets/skills/devextreme.png";
+import tailwind from "../assets/skills/tailwind-css.svg";
+import zustand from "../assets/skills/zustand.svg";
+import postgresql from "../assets/skills/postgresql.svg";
+import mongodb from "../assets/skills/mongodb.svg";
+import git from "../assets/skills/git.svg";
 
 const skills = [
   {
