@@ -7,6 +7,7 @@ const projects = [
   {
     defaultImg: OnTrack,
     hoverImg: OnTrackTasks,
+    name: "OnTrack",
     url: "https://adrgri.github.io/OnTrack.Frontend.React/",
     description:
       "A web application designed to streamline project management across industries by replacing traditional methods with a digital Kanban board. OnTrack enables users to add projects and tasks, move tasks between columns (To Do, Doing, Done),and utilize drag-and-drop functionality for easy task management",
@@ -45,14 +46,25 @@ function Projects() {
             onMouseLeave={() => setHoveredProject(null)}
           >
             <a href={project.url} target="_blank" rel="noopener noreferrer">
-              <img
-                src={
-                  hoveredProject === index
-                    ? project.hoverImg
-                    : project.defaultImg
-                }
-                alt={`Project ${project.name}`}
-              />
+              <div className="project-image-container">
+                {/* Default Image */}
+                <img
+                  src={project.defaultImg}
+                  alt={`Project ${project.name}`}
+                  className={`project-image default ${
+                    hoveredProject === index ? "hidden" : ""
+                  }`}
+                />
+                {/* Hover Image */}
+                <img
+                  src={project.hoverImg}
+                  alt={`Project ${project.name}`}
+                  className={`project-image hover ${
+                    hoveredProject === index ? "visible" : ""
+                  }`}
+                />
+              </div>
+
               <h3>{project.name}</h3>
               <p>{project.description}</p>
             </a>
