@@ -32,3 +32,15 @@
   transform: scale(1.2);
   color: #5efc8d;
 }
+
+@media (max-width: 768px) {
+  .contact-link .contact-icon {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-link .contact-icon {
+    font-size: 28px;
+  }
+}
