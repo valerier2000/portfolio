@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Navbar.css";
 
 const navbarLinks = [
@@ -13,6 +14,8 @@ const handleLogoClick = (e) => {
 };
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -21,11 +24,24 @@ function Navbar() {
         </a>
       </div>
 
-      <div className="navbar-right">
+      <div
+        className={`hamburger ${isMenuOpen ? "open" : ""}`}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+
+      <div className={`navbar-right ${isMenuOpen ? "open" : ""}`}>
         <ul className="nav-links">
           {navbarLinks.map((link, index) => (
             <li key={index}>
-              <a href={link.href} className="nav-link">
+              <a
+                href={link.href}
+                className="nav-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {link.name}
               </a>
             </li>

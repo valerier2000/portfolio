@@ -27,6 +27,11 @@
   animation: pulse 1.5s ease-in-out;
 }
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-right .nav-links {
   list-style: none;
   display: flex;
@@ -45,6 +50,7 @@
   transition: color 0.3s ease;
 }
 
+/* Underline effect */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -65,13 +71,61 @@
   width: 100%;
 }
 
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #e9f1f7;
+  margin: 3px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 @media (max-width: 768px) {
-  .navbar {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-right {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #1f1138;
+    width: 100%;
+    text-align: center;
+    display: none;
     flex-direction: column;
-    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-right.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-link {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
 
+/* Pulse animation */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -85,4 +139,17 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* Hamburger menu animation */
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
