@@ -103,13 +103,21 @@
     background-color: #1f1138;
     width: 100%;
     text-align: center;
-    display: none;
     flex-direction: column;
     padding: 10px 0;
+
+    opacity: 0; /* Start invisible */
+    transform: scale(0.95); /* Slightly smaller */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+    display: flex;
+    pointer-events: none; /* Prevent interaction when hidden */
   }
 
   .navbar-right.open {
-    display: flex;
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Normal size */
+    pointer-events: auto; /* Enable interaction */
   }
 
   .nav-links {
