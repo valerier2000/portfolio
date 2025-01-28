@@ -123,6 +123,11 @@
     width: 100%;
     text-align: center;
   }
+
+  /* Remove underline effect */
+  .nav-link::after {
+    display: none;
+  }
 }
 
 /* Pulse animation */
