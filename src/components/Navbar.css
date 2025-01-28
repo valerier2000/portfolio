@@ -91,9 +91,8 @@
     display: flex;
   }
 
-  .navbar-left {
-    width: 100%;
-    text-align: center;
+  .navbar-left .logo {
+    padding: 1rem;
   }
 
   .navbar-right {
